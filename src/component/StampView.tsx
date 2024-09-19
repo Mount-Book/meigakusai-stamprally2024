@@ -8,7 +8,7 @@ type LocationStampProp = {
 };
 
 export const StampView: React.FC<LocationStampProp> = ({ json }) => {
-  const imagespath = "src/assets/images/stamp/";
+  const imagespath = "public/assets/images/stamp/";
   const shoplist = json.shop.map((data, index) => {
     const gotStamp = GetStampData(data.id);
     return (
