@@ -2,13 +2,13 @@ import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import { LocationStamp } from "../types/Stampdatatype";
 import { GetStampData } from "./StampData";
+import { StampImage } from "./StampImage";
 
 type LocationStampProp = {
   json: LocationStamp;
 };
 
 export const StampView: React.FC<LocationStampProp> = ({ json }) => {
-  const imagespath = "./assets/images/stamp/";
   const shoplist = json.shop.map((data, index) => {
     const gotStamp = GetStampData(data.id);
     return (
@@ -26,7 +26,7 @@ export const StampView: React.FC<LocationStampProp> = ({ json }) => {
               }}
             >
               <img
-                src="src/assets/images/symbol/unacquired.png"
+                src="assets/images/symbol/unacquired.png"
                 style={{
                   width: "100%",
                   height: "auto",
@@ -36,7 +36,7 @@ export const StampView: React.FC<LocationStampProp> = ({ json }) => {
             </Box>
           )}
           <img
-            src={imagespath + data.imagepath}
+            src={StampImage(data.imagepath)}
             style={{
               width: "100%",
               height: "auto",
