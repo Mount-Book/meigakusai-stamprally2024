@@ -10,7 +10,7 @@ import { useReward } from "react-rewards";
 export const StampGet = () => {
   const nav = useNavigate();
   const id = useParams();
-  const imagesPath = "/public/assets/images/stamp/";
+  const imagesPath = "./assets/images/stamp/";
   const [stampData, setStampData] = useState({
     shopname: "",
     classname: "",
